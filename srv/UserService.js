@@ -4,7 +4,7 @@ module.exports = class UserService extends cds.ApplicationService { init() {
 
   const { Users } = this.entities;
 
-  this.on(['READ'], Users, async (req) => {
+  this.before(['READ'], Users, async (req) => {
     logger.log("check enhanced user attributes", req.user.attr);  
   });
 
