@@ -1,0 +1,6 @@
+@host = http://localhost:4004
+@credentials = Basic alice:
+
+### Get Users
+GET {{host}}/odata/v4/user/Users
+Authorization: {{credentials}}
